@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Favorites Gallery</title>
+
+
+  <link rel="stylesheet" href="css/style.css">
+
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(image/cp.jfif);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* HEADER */
+h1 {
+    text-align: center;
+    color: #4b2e1a;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 32px;
+    background-image: url(image/cp3.jfif);
+    padding: 20px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ROW: 2 BOXES PER ROW */
+.fav-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* BOX */
+.fav-box {
+    background-color: #d9c4a7;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fav-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+}
+
+/* BOX TITLE */
+.fav-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4b2e1a;
+    margin-bottom: 15px;
+}
+
+/* IMAGE CONTAINER */
+.fav-images {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* IMAGE FIGURE */
+figure {
+    text-align: center;
+    margin: 0;
+}
+
+figure img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+figure img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+figcaption {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #4b2e1a;
+    font-style: italic;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    .fav-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .fav-images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+  mark
+  {
+    background-color: burlywood;
+  }
+
+</style>
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION BAR ================= -->
+<div class="navigation-bar">
+    <img src="button/logo.jpeg" alt="Logo">
+    <strong style="color:#ffbf80;">Atiqah's Website</strong>
+
+    <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="biodata.html" class="active">Biodata</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="friends.html">Friends</a></li>
+        <li><a href="socmed.html">Social Media</a></li>
+    </ul>
+
+    <button class="dark-mode-button" onclick="toggleDarkMode()">dark mode🌙</button>
+</div>
+
+
+<h1>°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･My Gallery°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･</h1>
+<div class="container">
+
+<!-- ROW 1: Food + Drink -->
+<div class="fav-row">
+  <div class="fav-box">
+    <div class="fav-title">✦ Favorite Food ✦</div>
+    <div class="fav-images">
+      <figure>
+        <img src="image/food1.jpeg" alt="">
+        <figcaption><mark>Nasi Goreng USA</mark></figcaption>
+      </figure>
+      <figure>
+        <img src="image/food2.jpeg" alt="">
+        <figcaption><mark>Western</mark></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="fav-box">
+    <div class="fav-title">✦ Favorite Drink ✦</div>
+    <div class="fav-images">
+      <figure>
+        <img src="image/coffee.jpeg" alt="">
+        <figcaption><mark>Spanish Latte</mark></figcaption>
+      </figure>
+      <figure>
+        <img src="image/matcha.jpeg" alt="">
+        <figcaption><mark>Matcha Latte</mark></figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<!-- ROW 2: Car + Music -->
+<div class="fav-row">
+  <div class="fav-box">
+    <div class="fav-title">✦ Favorite Car ✦</div>
+    <div class="fav-images">
+      <figure>
+        <img src="image/gtr.jpg" alt="">
+        <figcaption><mark>Nissan GTR</mark></figcaption>
+      </figure>
+      <figure>
+        <img src="image/mc.jpg" alt="">
+        <figcaption><mark>Mini Cooper</mark></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="fav-box">
+    <div class="fav-title">✦ Favorite Music ✦</div>
+    <div class="fav-images">
+      <figure>
+        <img src="image/song1.jpeg" alt="">
+        <figcaption><mark>Artic Monkey- I Wanna be Yours</mark></figcaption>
+      </figure>
+      <figure>
+        <img src="image/song2.jpeg" alt="">
+        <figcaption><mark>Lady Gaga ft Bruno Mars- Die With a Smile</mark></figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<!-- ROW 3: Movie + Place -->
+<div class="fav-row">
+  <div class="fav-box">
+    <div class="fav-title">✦ Favorite Movie / Genre ✦</div>
+    <div class="fav-images">
+      <figure>
+        <img src="image/anime.jpeg" alt="">
+        <figcaption><mark>Demon Slayer</mark></figcaption>
+      </figure>
+      <figure>
+        <img src="image/baym.jpeg" alt="">
+        <figcaption><mark>Bon Appétit Your Majesty</mark></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="fav-box">
+    <div class="fav-title">✦ Favorite Place ✦</div>
+    <div class="fav-images">
+      <figure>
+        <img src="image/beach.jpeg" alt="">
+        <figcaption><mark>Beach</mark></figcaption>
+      </figure>
+      <figure>
+        <img src="image/dabong.jpeg" alt="">
+        <figcaption><mark>Nature & Hills</mark></figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<!-- ROW 4: K-pop Idol + Cousins -->
+<div class="fav-row">
+  <div class="fav-box">
+    <div class="fav-title">✦ Favorite K-pop Idol ✦</div>
+    <div class="fav-images">
+      <figure>
+        <img src="image/jungkook.jpeg" alt="">
+        <figcaption><mark>Jeon Jungkook</mark> </figcaption>
+      </figure>
+      <figure>
+        <img src="image/mingyu.jpeg" alt="">
+        <figcaption><mark>Kim Mingyu</mark></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="fav-box">
+    <div class="fav-title">✦ Favorite Cousins ✦</div>
+    <div class="fav-images">
+      <figure>
+        <img src="image/cousin1.jpeg" alt="">
+        <figcaption><mark>Mum's side</mark></figcaption>
+      </figure>
+      <figure>
+        <img src="image/cousin2.jpeg" alt="">
+        <figcaption><mark>Daddy's side</mark></figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<!-- ROW 5: Friends + Siblings -->
+<div class="fav-row">
+  <div class="fav-box">
+    <div class="fav-title">✦ Friends ✦</div>
+    <div class="fav-images">
+      <figure>
+        <img src="image/friends4.jpeg" alt="">
+        <figcaption><mark>Intern's friend</mark></figcaption>
+      </figure>
+      <figure>
+        <img src="image/classmate2.jpeg" alt="">
+        <figcaption><mark>Diploma's classmate</mark></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="fav-box">
+    <div class="fav-title">✦ Little Me ✦</div>
+    <div class="fav-images">
+      <figure>
+        <img src="image/cp1.jpeg" alt="">
+        <figcaption><mark>>ᴗ<</mark></figcaption>
+      </figure>
+      <figure>
+        <img src="image/cp2.jpeg" alt="">
+        <figcaption><mark>₍⑅ᐢ..ᐢ₎</mark></figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 | This website is for educational purposes only | IMD318 Assignment | Nur Atiqah Najwa Binti Mohd Kamarudin
+</div>
+</body>
+</html>

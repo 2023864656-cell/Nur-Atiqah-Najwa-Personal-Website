@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Education</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body 
+
+
+{
+    margin: 0;
+    padding: 40px;
+    padding-top: 120px;
+    background-color: #f5f1ee;
+    font-family: "Times New Roman", Georgia, serif;
+    color: #000000;
+}
+
+h2 {
+    text-align: center;
+    color: #4a2f24;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* BOX */
+.school-box {
+    background-color: #f1e4d3;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* BUTTON LOGO */
+.school-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* LOGO */
+.school-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4a2f24;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.school-logo:hover {
+    transform: scale(1.05);
+}
+
+/* INFO (HIDDEN) */
+.school-info {
+    display: none;
+    margin-top: 20px;
+}
+
+/* IMAGE INSIDE INFO */
+.school-info img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 10px;
+    margin: 15px auto;
+    display: block;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #c9b8a6;
+}
+
+table td:first-child {
+    font-weight: bold;
+    width: 40%;
+    color: #4a2f24;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION BAR ================= -->
+<div class="navigation-bar">
+    <img src="button/logo.jpeg" alt="Logo">
+    <strong style="color:#ffbf80;">Atiqah's Website</strong>
+
+    <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="biodata.html" class="active">Biodata</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="friends.html">Friends</a></li>
+        <li><a href="socmed.html">Social Media</a></li>
+    </ul>
+
+    <button class="dark-mode-button" onclick="toggleDarkMode()">dark mode🌙</button>
+</div>
+
+<p></p>
+<h2>My Education</h2>
+
+<div class="education-container">
+
+    <!-- PASTI -->
+    <div class="school-box">
+        <button class="school-btn" onclick="toggleInfo('pasti')">
+            <img src="button/pasti logo.webp" class="school-logo">
+        </button>
+
+        <div id="pasti" class="school-info">
+            <img src="image/pasti.jpeg" alt="PASTI School">
+            <table>
+                <tr><td>Institution</td><td>PASTI</td></tr>
+                <tr><td>Year</td><td>2011 - 2012</td></tr>
+                <tr><td>Achievement</td><td>Basic Religious Education</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- SKDH2 -->
+    <div class="school-box">
+        <button class="school-btn" onclick="toggleInfo('skdh2')">
+            <img src="button/skdh2 logo.jpeg" class="school-logo">
+        </button>
+
+        <div id="skdh2" class="school-info">
+            <img src="image/skdh2.jpeg" alt="SK Dato Hashim">
+            <table>
+                <tr><td>Institution</td><td>SK Dato' Hashim (2)</td></tr>
+                <tr><td>Year</td><td>2012 - 2017</td></tr>
+                <tr><td>Achievement</td><td>UPKK</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- SKPS -->
+    <div class="school-box">
+        <button class="school-btn" onclick="toggleInfo('skps')">
+            <img src="button/skps logo.jpeg" class="school-logo">
+        </button>
+
+        <div id="skps" class="school-info">
+            <img src="image/skps.jpeg" alt="SK Pantai Senak">
+            <table>
+                <tr><td>Institution</td><td>SK Pantai Senak</td></tr>
+                <tr><td>Year</td><td>2017</td></tr>
+                <tr><td>Achievement</td><td>Primary School Certificate</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- SMKBP2 -->
+    <div class="school-box">
+        <button class="school-btn" onclick="toggleInfo('smkbp2')">
+            <img src="button/smkbp2 logo.jpeg" class="school-logo">
+        </button>
+
+        <div id="smkbp2" class="school-info">
+            <img src="image/smkbp2.jpeg" alt="SMK Beris Panchor">
+            <table>
+                <tr><td>Institution</td><td>SMK Beris Panchor (2)</td></tr>
+                <tr><td>Year</td><td>2018 - 2022</td></tr>
+                <tr><td>Achievement</td><td>SPM</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- UiTM -->
+    <div class="school-box">
+        <button class="school-btn" onclick="toggleInfo('uitm')">
+            <img src="button/uitm logo.png" class="school-logo">
+        </button>
+
+        <div id="uitm" class="school-info">
+            <img src="image/uitm.jpg" alt="UiTM Campus">
+            <table>
+                <tr><td>Institution</td><td>Universiti Teknologi MARA</td></tr>
+                <tr><td>Year</td><td>2023 - Present</td></tr>
+                <tr><td>Programme</td><td>Diploma in Information Management</td></tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function toggleInfo(id) {
+    const allInfos = document.querySelectorAll('.school-info');
+    
+    allInfos.forEach(info => {
+        if(info.id === id){
+            info.style.display = info.style.display === "block" ? "none" : "block";
+        } else {
+            info.style.display = "none";
+        }
+    });
+}
+</script>
+  
+<p></p>
+<p></p>
+
+<div class="footer">
+© 2026 | This website is for educational purposes only | IMD318 Assignment | Nur Atiqah Najwa Binti Mohd Kamarudin
+</div>
+
+</body>
+</html>

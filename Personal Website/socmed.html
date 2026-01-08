@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>                                                                                                                                                                              
+/* ================= THEME ================= */
+:root {
+    --bg: #b4957e;
+    --box: #604b39;
+    --text: #ece5df;
+}
+
+/* ================= BODY ================= */
+body {
+    margin: 0;
+    padding-top: 120px; /* space for navbar */
+    background-color: var(--bg);
+    font-family: Arial, sans-serif;
+}
+
+/* ================= FLEX CONTAINER ================= */
+.social-wrapper {
+    display: flex;
+    justify-content: center; /* center horizontal */
+    flex-wrap: wrap;         /* wrap on smaller screens */
+    gap: 40px;
+    padding: 40px 0;
+}
+
+/* ================= SOCIAL BOX ================= */
+.social-box {
+    width: 150px;
+    height: 150px;
+    background-color: var(--box);
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.social-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #4a2f24;
+    color: white;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION BAR ================= -->
+<div class="navigation-bar">
+    <img src="button/logo.jpeg" alt="Logo">
+    <strong style="color:#ffbf80;">Atiqah's Website</strong>
+
+    <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="biodata.html">Biodata</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="friends.html">Friends</a></li>
+        <li><a href="socmed.html" class="active">Social Media</a></li>
+    </ul>
+
+    <button class="dark-mode-button" onclick="toggleDarkMode()">dark mode🌙</button>
+</div>
+
+<!-- ================= SOCIAL MEDIA ================= -->
+<div class="social-wrapper">
+    <a href="https://www.tiktok.com/@nrnjwaa00" target="_blank" class="social-box">
+        <img src="button/tiktok.jpeg" alt="TikTok">
+    </a>
+
+    <a href="https://www.facebook.com/share/189ornANub/?mibextid=wwXIfr" target="_blank" class="social-box">
+        <img src="button/facebook.jpeg" alt="Facebook">
+    </a>
+
+    <a href="https://www.instagram.com/4njwa._?igsh=MXhjNDFrZTYyeTVjcA%3D%3D&utm_source=q" target="_blank" class="social-box">
+        <img src="button/insta.jpeg" alt="Instagram">
+    </a>
+
+    <a href="https://open.spotify.com/user/31k3smigkeztxyndwqaohq6qu4lm?si=B55i8NejSgqHriVyl6_Jbg" target="_blank" class="social-box">
+        <img src="button/spotify.jpeg" alt="Spotify">
+    </a>
+
+    <a href="https://www.threads.com/@4njwa._?igshid=NTc4MTIwNjQ2YQ==" target="_blank" class="social-box">
+        <img src="button/threads.jpeg" alt="Threads">
+    </a>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+© 2026 | This website is for educational purposes only | IMD318 Assignment | Nur Atiqah Najwa Binti Mohd Kamarudin
+</div>
+
+<script>
+function toggleDarkMode(){
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>

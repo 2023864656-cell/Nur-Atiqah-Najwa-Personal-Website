@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Experience & Achievement</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* ===== BODY ===== */
+body {
+    background-color: #f3eee9;
+    font-family: Poppins, Arial, sans-serif;
+}
+
+/* ===== TITLES ===== */
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    color: #5a3e2b;
+    margin: 40px 0 20px;
+}
+
+/* ===== TABLE ===== */
+.brown-table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: #fff7f0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    margin-bottom: 60px;
+}
+
+.brown-table th {
+    background-color: #6b4f3b;
+    color: white;
+    padding: 15px;
+}
+
+.brown-table td {
+    padding: 15px;
+    text-align: center;
+    color: #5a3e2b;
+}
+
+/* ===== ROW HOVER ===== */
+.brown-table tr {
+    transition: all 0.3s ease;
+}
+
+.brown-table tr:hover {
+    background-color: #e6d3c3;
+    transform: scale(1.01);
+}
+
+/* ===== TABLE IMAGE ===== */
+.table-img {
+    width: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.table-img:hover {
+    transform: scale(1.2);
+}
+
+/* ===== POPUP ===== */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.popup-content {
+    margin: 6% auto;
+    display: block;
+    max-width: 80%;
+    border-radius: 15px;
+}
+
+.close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+/* ===== EXPERIENCE GALLERY ===== */
+.experience-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.gallery-box {
+    width: 200px;
+    background: #fff7f0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.gallery-box:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(90,62,43,0.9);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-box:hover .gallery-caption {
+    opacity: 1;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION BAR ================= -->
+<div class="navigation-bar">
+    <img src="button/logo.jpeg" alt="Logo">
+    <strong style="color:#ffbf80;">Atiqah's Website</strong>
+
+    <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="biodata.html">Biodata</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="friends.html">Friends</a></li>
+        <li><a href="socmed.html">Social Media</a></li>
+    </ul>
+
+    <button class="dark-mode-button" onclick="toggleDarkMode()">dark mode🌙</button>
+</div>
+
+<!-- ================= ACHIEVEMENT ================= -->
+<h1 class="page-title">✦ Achievement ✦</h1>
+
+<table class="brown-table">
+<tr>
+    <th>Level</th>
+    <th>Year</th>
+    <th>Result</th>
+    <th>Evidence</th>
+</tr>
+
+<tr>
+    <td>UPSR</td>
+    <td>2017</td>
+    <td>5A 1B</td>
+    <td>
+        <img src="image/upsr.jpeg" class="table-img" onclick="openPopup(this)">
+    </td>
+</tr>
+
+<tr>
+    <td>SPM</td>
+    <td>2022</td>
+    <td>2A, 5B, 1C</td>
+    <td>
+        <img src="image/spm.jpeg" class="table-img" onclick="openPopup(this)">
+    </td>
+</tr>
+
+<tr>
+    <td>Diploma UiTM</td>
+    <td>2023 – Present</td>
+    <td>CGPA 3.00+</td>
+    <td>Ongoing</td>
+</tr>
+</table>
+
+<!-- ================= EXPERIENCE ================= -->
+<h1 class="page-title">✦ Experience ✦</h1>
+
+<table class="brown-table">
+<tr>
+    <th>Place / Program</th>
+    <th>Role</th>
+    <th>Description</th>
+    <th>Year</th>
+</tr>
+
+<tr>
+    <td><abbr title="Perbadanan Perpustakaan Awam Kelantan">PPAK</abbr> (Internship)</td>
+    <td>Internship Student</td>
+    <td>
+        Involved in handling programs, managing participants,
+        documentation and assisting event coordination.
+    </td>
+    <td>2025</td>
+</tr>
+
+<tr>
+    <td>InfoFest UiTM</td>
+    <td><abbr title="Tugas-tugas Khas">TTK</abbr> Biros</td>
+    <td>
+        Organized student information program, handled booth setup,
+        crowd management and promotion.
+    </td>
+    <td>2025 / 2026</td>
+</tr>
+</table>
+
+<!-- ===== EXPERIENCE GALLERY ===== -->
+<div class="experience-gallery">
+    <div class="gallery-box">
+        <img src="image/ppak1.jpeg">
+        <div class="gallery-caption">PPAK Program Handling</div>
+    </div>
+
+    <div class="gallery-box">
+        <img src="image/ppak2.jpeg">
+        <div class="gallery-caption">Shooting For Competition</div>
+    </div>
+
+    <div class="gallery-box">
+        <img src="image/zumba.jpeg">
+        <div class="gallery-caption">InfoFest Zumba</div>
+    </div>
+
+    <div class="gallery-box">
+        <img src="image/classmate1.jpeg">
+        <div class="gallery-caption">5E'S Team</div>
+    </div>
+</div>
+
+<!-- ===== POPUP ===== -->
+<div id="imgPopup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img class="popup-content" id="popupImg">
+</div>
+
+<script>
+function openPopup(img) {
+    document.getElementById("imgPopup").style.display = "block";
+    document.getElementById("popupImg").src = img.src;
+}
+
+function closePopup() {
+    document.getElementById("imgPopup").style.display = "none";
+}
+
+document.getElementById("imgPopup").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closePopup();
+    }
+});
+</script>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer" style="text-align:center; padding:15px; background:#4a2f24; color:white;">
+©️ 2026 | This website is for educational purposes only | IMD318 Assignment |
+Nur Atiqah Najwa Binti Mohd Kamarudin
+</div>
+
+</body>
+</html>

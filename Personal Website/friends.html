@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Friends</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body
+        {
+            background-image: url(image/cvp.jfif);
+        }
+    </style>
+
+
+
+</head>
+
+
+<body>
+
+    <!-- ================= NAVIGATION BAR ================= -->
+<div class="navigation-bar">
+    <img src="button/logo.jpeg" alt="Logo">
+    <strong style="color:#ffbf80;">Atiqah's Website</strong>
+
+    <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="biodata.html" class="active">Biodata</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="friends.html">Friends</a></li>
+        <li><a href="socmed.html">Social Media</a></li>
+    </ul>
+
+    <button class="dark-mode-button" onclick="toggleDarkMode()">dark mode🌙</button>
+</div>
+
+
+    <h1 class="page-title" style="background-image: url(image/cp3.jfif); color: brown;">────⋆⋅☆⋅⋆My Friends⋆⋅☆⋅⋆──</h1>
+
+
+    <!-- ===== SECTION ===== -->
+    <section class="friends-section">
+        <h2>⋅˚₊‧ ୨୧ Friends ‧₊˚ ⋅</h2>
+        <div class="friends-row">
+            <div class="friend-box">
+                <img src="image/friends2.jpeg" alt="friend1" onclick="showCaption(this)">
+                <p class="caption">My friend since school 💕</p>
+            </div>
+
+            <div class="friend-box">
+                <img src="image/friends1.jpeg" alt="friend2" onclick="showCaption(this)">
+                <p class="caption">Always together 🤎</p>
+            </div>
+
+            <div class="friend-box">
+                <img src="image/friends3.jpeg" alt="friend3" onclick="showCaption(this)">
+                <p class="caption">Crazy moments 😆</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="friends-section">
+        <h2>⋅˚₊‧ ୨୧ Best Friends ‧₊˚ ⋅</h2>
+        <div class="friends-row">
+            <div class="friend-box">
+                <img src="image/jang.jpeg" onclick="showCaption(this)">
+                <p class="caption"><i>Aina Fauzana</i></p>
+            </div>
+
+            <div class="friend-box">
+                <img src="image/pikoh.jpeg" onclick="showCaption(this)">
+                <p class="caption"><i>Aina Syafiqah</i></p>
+            </div>
+
+            <div class="friend-box">
+                <img src="image/nina.jpeg" onclick="showCaption(this)">
+                <p class="caption"><i>Athirah Amanina</i></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="friends-section">
+        <h2>⋅˚₊‧ ୨୧ University Friends ‧₊˚ ⋅</h2>
+        <div class="friends-row">
+            <div class="friend-box">
+                <img src="image/asna.jpeg" onclick="showCaption(this)">
+                <p class="caption"><i>Asna</i></p>
+            </div>
+
+            <div class="friend-box">
+                <img src="image/yaya.jpeg" onclick="showCaption(this)">
+                <p class="caption"><i>Yaya</i></p>
+            </div>
+
+            <div class="friend-box">
+                <img src="image/muna.jpeg" onclick="showCaption(this)">
+                <p class="caption"><i>Muna</i></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="friends-section">
+        <h2>⋅˚₊‧ ୨୧ Coursemate Friends ‧₊˚ ⋅</h2>
+        <div class="friends-row">
+            <div class="friend-box">
+                <img src="image/intan.jpeg" onclick="showCaption(this)">
+                <p class="caption"><i>Intan</i></p>>
+            </div>
+
+            <div class="friend-box">
+                <img src="image/zira.jpeg" onclick="showCaption(this)">
+                <p class="caption"><i>Azira</i></p>
+            </div>
+
+            <div class="friend-box">
+                <img src="image/pia.jpeg" onclick="showCaption(this)">
+                <p class="caption"><i>Sofia</i></p>
+            </div>
+        </div>
+    </section>
+
+<script>
+function showCaption(img) {
+    const caption = img.nextElementSibling;
+    caption.classList.toggle("show");
+}
+</script>
+
+<div class="footer">
+© 2026 | This website is for educational purposes only | IMD318 Assignment | Nur Atiqah Najwa Binti Mohd Kamarudin
+</div>
+
+</body>
+</html>
